@@ -1,6 +1,8 @@
         Simulation LSDYNA de l'impact MyotonPRO sur silicone multi-couche 
         PILOTAGE EN DÉPLACEMENT
-  
+Le fichier .zip contient le modèle (décompresser pour avoir le fichier .k)
+
+
 1. Objectif de la simulation:
 Modélisation numérique du comportement mécanique d'un empilement de caoutchouc de silicone, 
 imitant la superposition de la peau, le gras, le fascia et le muscle, soumis à 
