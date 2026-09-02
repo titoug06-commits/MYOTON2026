@@ -1,7 +1,8 @@
-        Simulation LSDYNA de l'impact MyotonPro sur silicone multi-couche 
+        Simulation LSDYNA de l'impact MyotonPRO sur silicone multi-couche 
         PILOTAGE EN FORCE (Résultats préliminaires, instabilités observées)
 
-  
+Le fichier .zip contient le modèle lsdyna (fichier .k une fois décompréssé).
+
 1. Objectif de la simulation:
 Modélisation numérique du comportement mécanique d'un empilement de
 silicone, imitant la superposition peau/gras/fascia/muscle, soumis à une force 
@@ -40,7 +41,7 @@ Les paramètres matériaux (Ogden + Prony) sont ceux du tableau du mémoire.
   avec option 'SOFT=2'.
   
   Temps : 210 ms total.
-  Sorties : D3PLOT (dt=2 ms), GLSTAT, RCFORC, NODEFOR (dt=0,1 ms).
+  Sorties : D3PLOT (dt=2 ms), GLSTAT, RCFORC, NODEFOR, et ELOUT (dt=0,1 ms).
 
  
 5. Différences par rapport au pilotage en déplacement
@@ -51,7 +52,7 @@ Les paramètres matériaux (Ogden + Prony) sont ceux du tableau du mémoire.
   
   Avantage théorique : Plus proche de la physique réelle.
   
-  Inconvénient observé : Instabilités numériques significatives (voir section 6).
+  Inconvénient observé : Instabilités numériques significatives et résultats loins de la réalité(voir section 6).
 
  
 6. Résultats et limitations observées
@@ -63,7 +64,7 @@ Les paramètres matériaux (Ogden + Prony) sont ceux du tableau du mémoire.
   Observation détaillée :
     - Pic principal : ~0,30–0,31 (amplitude beaucoup plus élevée que le pilotage 
       en déplacement, x10)
-    - Phase de relaxation : oscillations non-amorties et non-physiques, amplitude 
+    - Phase de relaxation : oscillations sur-amorties et non-physiques, amplitude 
       restant autour de 0,10–0,12 indéfiniment
     - Pas de convergence vers zéro malgré l'absence de nouvelle excitation
   
@@ -83,3 +84,4 @@ Les paramètres matériaux (Ogden + Prony) sont ceux du tableau du mémoire.
   - Ajustement du paramètre SOFT ou passage à un contact de type FORM=1 (penalty)
   - Augmentation de la finesse du maillage au contact sonde-gras
   - Réduction du timestep initial (DTINIT)
+  - Modification des conditions limites et contact (friction, GLUE contact)
